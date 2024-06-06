@@ -9,8 +9,8 @@ namespace CoinFlip.Models
 {
     public class Coin
     {
-        private string LadoEscolhido { get; set; }
-        private string LadoSorteado {  get; set; }
+        public string LadoEscolhido { get; set; }
+        public string LadoSorteado { get; set; }
 
         //Método construtor 
         public Coin()
@@ -18,10 +18,9 @@ namespace CoinFlip.Models
             
         }
         //Método Jogar a moeda. Retorna o lado sorteado como uma string
-        public string Jogar()
+        public void Jogar()
         {
             LadoSorteado = (new Random().Next(2) == 0) ? "Cara" : "Coroa";
-            return (LadoSorteado);
         }
        
     }

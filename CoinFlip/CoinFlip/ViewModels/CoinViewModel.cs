@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using CoinFlip.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 
@@ -19,11 +20,11 @@ namespace CoinFlip.ViewModels
         [ObservableProperty]
         private string escolha;
 
-        //public ICommand JogarCommand { get; }
+        public ICommand JogarCommand { get; }
 
         public CoinViewModel()
         {
-            //JogarCommand = new Command
+            JogarCommand = new Command(Jogar);
         }
 
         public void Jogar()

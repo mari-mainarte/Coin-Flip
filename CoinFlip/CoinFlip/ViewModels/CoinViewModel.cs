@@ -20,6 +20,7 @@ namespace CoinFlip.ViewModels
         [ObservableProperty]
         private string escolha;
 
+        //ICommand - cria um comando
         public ICommand JogarCommand { get; }
 
         public CoinViewModel()
@@ -27,11 +28,26 @@ namespace CoinFlip.ViewModels
             JogarCommand = new Command(Jogar);
         }
 
+
         public void Jogar()
         {
+            //cria uma moeda
             Coin coin = new Coin();
+            
+            //chama o método jogar da moeda
             coin.Jogar();
-            Resultado = Escolha == coin.LadoSorteado ? "Você venceu" : "Você perdeu";
+
+            Imagem = $"{coin.LadoSorteado}.png";
+
+            if (Escolha == coin.LadoSorteado)
+            {
+                Resultado = "\nVocê venceu\n";
+            }
+            else
+            {
+                Resultado = "\nVocê perdeu\n";
+            }
+
 
         }
     }  

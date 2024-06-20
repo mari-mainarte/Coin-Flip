@@ -19,7 +19,7 @@ namespace CoinFlip.Models
         //Método Jogar a moeda. Retorna o lado sorteado como uma string
         public void Jogar()
         {
-            LadoSorteado = (new Random().Next(2) == 0) ? "Cara" : "Coroa";
+            LadoSorteado = new Random().Next(2) == 0 ? "cara" : "coroa";
         }
        
     }

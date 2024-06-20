@@ -13,7 +13,7 @@
         {
             int randomCoin = new Random().Next(0, 2);
             if (randomCoin == 0){
-                CoinImage.Source = "cara_moeda.png";
+                CoinImage.Source = "cara.png";
                 if (CoinPicker.SelectedIndex == 0)
                 {
                     UserMessage.Text = "Você venceu!";
@@ -24,7 +24,7 @@
                 }
             }else if (randomCoin == 1)
             {
-                CoinImage.Source = "coroa_moeda.png";
+                CoinImage.Source = "coroa.png";
                 if (CoinPicker.SelectedIndex == 1)
                 {
                     UserMessage.Text = "Você venceu!";
